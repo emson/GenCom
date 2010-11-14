@@ -10,6 +10,7 @@ class SitesController < ApplicationController
   
     def lookup_site
       @site = Site.find_by_domain(request.host)
+      @page = Page.find(@site.default_page)
       redirect_to :action => "nosite" unless @site
     end
   

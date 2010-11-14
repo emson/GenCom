@@ -20,8 +20,6 @@ class Page < ActiveRecord::Base
       end
     end
     
-    
-    
 end
 
 
@@ -32,8 +30,8 @@ end
 #  id         :integer         not null, primary key
 #  title      :string(255)
 #  site_id    :integer
+#  page_type  :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  page_type  :string(255)
 #
 

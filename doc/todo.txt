@@ -1,8 +1,11 @@
-Display snippets in views
-Dynamically or conventionally assign css file to a site
-Navigation - some pages, listed PLUS standard pages about-us contact-us 
-Site Header, Sidebar & Footer snippets
-Email capture - widget
-Slugify_page_titles
-Markdown
-Design
+
+Todo:
+  - Remove standard rails home page
+  - Display snippets in views
+  - Dynamically or conventionally assign css file to a site
+  - Navigation - some pages, listed PLUS standard pages about-us contact-us 
+  - Site Header, Sidebar & Footer snippets
+  - Email capture - widget
+  - Slugify_page_titles
+  - Markdown
+  - Design

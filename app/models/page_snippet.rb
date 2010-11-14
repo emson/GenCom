@@ -1,10 +1,9 @@
-require 'spec_helper'
-
-describe Snippet do
-  pending "add some examples to (or delete) #{__FILE__}"
+class PageSnippet < Snippet
+  belongs_to :page
+  
+  validates_presence_of :page
+  validates_uniqueness_of :ref, :scope => :page_id
 end
-
-
 # == Schema Information
 #
 # Table name: snippets

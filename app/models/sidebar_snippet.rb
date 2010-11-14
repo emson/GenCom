@@ -1,10 +1,7 @@
-require 'spec_helper'
-
-describe Snippet do
-  pending "add some examples to (or delete) #{__FILE__}"
+class SidebarSnippet < Snippet
+  belongs_to :site
+  validates_presence_of :site
 end
-
-
 # == Schema Information
 #
 # Table name: snippets

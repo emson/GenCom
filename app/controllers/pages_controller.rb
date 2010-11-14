@@ -1,0 +1,5 @@
+class PagesController < SitesController
+  
+  
+  
+end

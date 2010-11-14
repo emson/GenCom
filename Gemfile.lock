@@ -28,6 +28,7 @@ GEM
       activemodel (= 3.0.1)
       activesupport (= 3.0.1)
     activesupport (3.0.1)
+    annotate (2.4.0)
     arel (1.0.1)
       activesupport (~> 3.0.0)
     autotest (4.4.2)
@@ -113,6 +114,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   autotest
   capistrano
   factory_girl_rails

@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101114114449) do
+ActiveRecord::Schema.define(:version => 20101114215959) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "page_type"
   end
 
   create_table "sites", :force => true do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20101114114449) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "default_page"
   end
 
   create_table "snippets", :force => true do |t|
@@ -33,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20101114114449) do
     t.integer  "page_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.integer  "site_id"
   end
 
 end

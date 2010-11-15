@@ -4,6 +4,11 @@ class Site < ActiveRecord::Base
   has_one :footer_snippet
   has_one :sidebar_snippet
   validates_presence_of :title, :domain, :default_page
+  
+  def page_by_slug(slug)
+    self.pages.find_by_slug(slug)
+  end
+  
 end
 
 

@@ -5,10 +5,17 @@ class Page < ActiveRecord::Base
   
   validate :check_refs
   
+  before_save :slugify!
+  
   
   def snippet_by_ref(ref)
     snippets.select{ |snippet| snippet.ref == ref }.first
   end
+  
+  def slugify!(force=false)
+    self.slug = self.title.gsub(/[^A-Z,a-z,0-9,_]/,"-").downcase.squeeze('-') if self.slug.blank? || force == true
+  end
+  
   
   private
     

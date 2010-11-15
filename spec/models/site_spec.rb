@@ -1,7 +1,24 @@
 require 'spec_helper'
 
 describe Site do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  describe "Pages" do
+    it "should return the page with a matched slug" do
+      site = Factory(:site)
+      page = Factory(:page, :slug=>'my-nice-page')
+      site.pages << page
+      site.page_by_slug('my-nice-page').should == page
+    end
+    
+    it "should return nil if a page slug does not exist" do
+      site = Factory(:site)
+      page = Factory(:page, :slug=>'my-nice-page')
+      site.pages << page
+      site.page_by_slug('bad-page').should be_nil
+    end
+    
+  end
+  
 end
 
 

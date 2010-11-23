@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101115185402) do
+ActiveRecord::Schema.define(:version => 20101123184843) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -27,8 +27,7 @@ ActiveRecord::Schema.define(:version => 20101115185402) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "default_page"
-    t.string   "slug"
+    t.integer  "default_page_id"
   end
 
   create_table "snippets", :force => true do |t|

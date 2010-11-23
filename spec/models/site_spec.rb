@@ -19,6 +19,42 @@ describe Site do
     
   end
   
+  it "should be valid if a page exists and a default page is set" do
+    site = Factory(:site)
+    a_page = Factory(:page)
+    site.pages << a_page
+    site.default_page_id = a_page.id
+    site.valid?
+    site.errors[:default_page_id].should == []
+  end
+  
+  it "should not be valid if a page exists and a default page is not available" do
+    site = Factory(:site)
+    a_page = Factory(:page)
+    site.pages << a_page
+    site.default_page_id = a_page.id + 100
+    site.valid?
+    site.errors[:default_page_id].should == ["default page must exist"]
+  end
+  
+  
+  
+  it "should validate that a default page must exist if pages.count > 0" do
+    site = Factory(:site)
+    a_page = Factory(:page)
+    site.pages << a_page
+    site.valid?
+    site.errors[:default_page_id].include?("default page must exist").should be_true
+  end
+  
+  it "should not validate that a default page must exist if pages.count equals 0" do
+    site = Factory(:site)
+    site.valid?
+    site.errors[:default_page_id].should == []
+  end
+  
+  
+  
 end
 
 
@@ -33,6 +69,6 @@ end
 #  notes        :text
 #  created_at   :datetime
 #  updated_at   :datetime
-#  default_page :integer
+#  default_page_id :integer
 #
 

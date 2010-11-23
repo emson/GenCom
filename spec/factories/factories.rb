@@ -1,15 +1,15 @@
 
 
+Factory.define :site do |site|
+  site.title "Simple Site"
+  site.domain "simplesite.com"
+end
+
 Factory.define :page do |page|
   page.title "my page title"
   page.page_type "mock"
 end
 
-Factory.define :site do |site|
-  site.title "Simple Site"
-  site.domain "simplesite.com"
-  site.default_page Factory(:page).id
-end
 
 Factory.define :snippet do |snippet|
   snippet.sequence(:ref) { |num| "ref-#{num}" }

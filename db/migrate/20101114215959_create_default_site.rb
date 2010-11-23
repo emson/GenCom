@@ -1,6 +1,6 @@
 class CreateDefaultSite < ActiveRecord::Migration
   def self.up
-    Site.create!(:title=>"Dev Site", :domain=>"localhost", :notes=>"Development Site", :default_page=>1)
+    Site.create!(:title=>"Dev Site", :domain=>"localhost", :notes=>"Development Site", :default_page_id=>1)
   end
 
   def self.down

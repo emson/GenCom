@@ -3,7 +3,13 @@ class PagesController < ApplicationController
   before_filter :lookup_site
   
   def show
-    # TODO aise 404 if slug does not exist in a page
+    page = @site.pages.find_by_slug(request.path)
+    
+    unless page
+      response.status = 404
+      render :file=>'public/404.html'
+    end
+    
   end
   
   def nosite

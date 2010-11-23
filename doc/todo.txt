@@ -1,6 +1,6 @@
 
 Todo:
-  - Remove standard rails home page
+  ✓ Remove standard rails home page
   - Display snippets in views
   - Dynamically or conventionally assign css file to a site
   - Navigation - some pages, listed PLUS standard pages about-us contact-us 

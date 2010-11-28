@@ -6,8 +6,8 @@ Factory.define :site do |site|
 end
 
 Factory.define :page do |page|
-  page.title "my page title"
-  page.page_type "mock"
+  page.sequence(:title) { |num| "Page Title Number: #{num}" }
+  page.template "mock"
 end
 
 

@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101123184843) do
+ActiveRecord::Schema.define(:version => 20101128122304) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "page_type"
+    t.string   "template"
     t.string   "slug"
   end
 

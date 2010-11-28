@@ -17,7 +17,7 @@ describe Page do
   end
   
   it 'should return the snippet by ref' do
-    page = Factory.build(:page, :page_type => 'mock')
+    page = Factory.build(:page, :template => 'mock')
     snippetA = Factory.build(:snippet, :ref=>"refA")
     page.snippets << snippetA
     page.snippets << Factory.build(:snippet, :ref=>"refB")
@@ -26,7 +26,7 @@ describe Page do
   end
   
   it "should not be valid if there are no snippets for the role specified by the mock view" do
-    page = Factory(:page, :page_type => 'mock')
+    page = Factory(:page, :template => 'mock')
     page.snippets << Factory.build(:snippet, :ref=>"refA")
     page.snippets << Factory.build(:snippet, :ref=>"refB")
     page.snippets << Factory.build(:snippet, :ref=>"refC")
@@ -70,6 +70,7 @@ describe Page do
 end
 
 
+
 # == Schema Information
 #
 # Table name: pages
@@ -79,6 +80,7 @@ end
 #  site_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
-#  page_type  :string(255)
+#  template   :string(255)
+#  slug       :string(255)
 #
 

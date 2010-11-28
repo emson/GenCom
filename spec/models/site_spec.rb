@@ -59,16 +59,17 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: sites
 #
-#  id           :integer         not null, primary key
-#  title        :string(255)
-#  domain       :string(255)
-#  notes        :text
-#  created_at   :datetime
-#  updated_at   :datetime
+#  id              :integer         not null, primary key
+#  title           :string(255)
+#  domain          :string(255)
+#  notes           :text
+#  created_at      :datetime
+#  updated_at      :datetime
 #  default_page_id :integer
 #
 

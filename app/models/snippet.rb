@@ -11,10 +11,10 @@ end
 #  id         :integer         not null, primary key
 #  ref        :string(255)
 #  content    :text
+#  site_id    :integer
 #  page_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
 #  type       :string(255)
-#  site_id    :integer
 #
 

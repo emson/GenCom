@@ -4,34 +4,34 @@ describe Page do
   
   it "should allow uniquely named snippets, by ref" do
     page = Factory.build(:page)
-    (page.snippets << Factory.build(:snippet, :ref=>"ref-A")).should_not be_nil
-    (page.snippets << Factory.build(:snippet, :ref=>"ref-B")).should_not be_nil
-    (page.snippets << Factory.build(:snippet, :ref=>"ref-C")).should_not be_nil
+    (page.page_snippets << Factory.build(:page_snippet, :ref=>"ref-A")).should_not be_nil
+    (page.page_snippets << Factory.build(:page_snippet, :ref=>"ref-B")).should_not be_nil
+    (page.page_snippets << Factory.build(:page_snippet, :ref=>"ref-C")).should_not be_nil
   end
   
   it "should fail if a duplicate snippet ref is added" do
     page = Factory.build(:page)
-    (page.snippets << Factory.build(:snippet, :ref=>"ref-A")).should_not be_nil
-    (page.snippets << Factory.build(:snippet, :ref=>"ref-A")).should_not be_false
+    (page.page_snippets << Factory.build(:page_snippet, :ref=>"ref-A")).should_not be_nil
+    (page.page_snippets << Factory.build(:page_snippet, :ref=>"ref-A")).should_not be_false
    
   end
   
   it 'should return the snippet by ref' do
     page = Factory.build(:page, :template => 'mock')
-    snippetA = Factory.build(:snippet, :ref=>"refA")
-    page.snippets << snippetA
-    page.snippets << Factory.build(:snippet, :ref=>"refB")
-    page.snippets << Factory.build(:snippet, :ref=>"refC")
+    snippetA = Factory.build(:page_snippet, :ref=>"refA")
+    page.page_snippets << snippetA
+    page.page_snippets << Factory.build(:page_snippet, :ref=>"refB")
+    page.page_snippets << Factory.build(:page_snippet, :ref=>"refC")
     page.snippet_by_ref("refA").should == snippetA
   end
   
   it "should not be valid if there are no snippets for the role specified by the mock view" do
     page = Factory(:page, :template => 'mock')
-    page.snippets << Factory.build(:snippet, :ref=>"refA")
-    page.snippets << Factory.build(:snippet, :ref=>"refB")
-    page.snippets << Factory.build(:snippet, :ref=>"refC")
+    page.page_snippets << Factory.build(:page_snippet, :ref=>"refA")
+    page.page_snippets << Factory.build(:page_snippet, :ref=>"refB")
+    page.page_snippets << Factory.build(:page_snippet, :ref=>"refC")
     page.valid?
-    page.errors[:snippets].should == []
+    page.errors[:page_snippets].should == []
   end
   
   

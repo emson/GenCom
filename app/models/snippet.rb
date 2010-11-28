@@ -1,6 +1,10 @@
 class Snippet < ActiveRecord::Base
-  validates_presence_of :ref, :content
-
+  validates_presence_of :content
+  
+  def markdown
+    markdown = RDiscount.new(content)
+    markdown.to_html
+  end
 end
 
 

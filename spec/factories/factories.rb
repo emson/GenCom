@@ -11,7 +11,7 @@ Factory.define :page do |page|
 end
 
 
-Factory.define :snippet do |snippet|
+Factory.define :page_snippet do |snippet|
   snippet.sequence(:ref) { |num| "ref-#{num}" }
   snippet.content "<h2>Some Content</h2>"
 end

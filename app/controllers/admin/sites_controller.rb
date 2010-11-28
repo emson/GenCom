@@ -1,4 +1,7 @@
 class Admin::SitesController < ApplicationController
+  layout "admin"
+  
+  
   # GET /sites
   # GET /sites.xml
   def index

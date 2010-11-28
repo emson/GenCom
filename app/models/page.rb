@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
   belongs_to :site
-  has_many :snippets
+  has_many :page_snippets
   validates_presence_of :title, :template
   
   validate :check_refs
@@ -9,7 +9,7 @@ class Page < ActiveRecord::Base
   
   
   def snippet_by_ref(ref)
-    snippets.select{ |snippet| snippet.ref == ref.to_s }.first
+    page_snippets.select{ |snippet| snippet.ref == ref.to_s }.first
   end
   
   def slugify!(force=false)
@@ -20,7 +20,7 @@ class Page < ActiveRecord::Base
   private
     
     def check_refs
-      return if snippets.count == 0
+      return if page_snippets.count == 0
       roles = Util.extract_roles(self.template)
       roles.each do |ref|
         self.errors.add(:snippets, "This page is missing snippet.ref=#{ref}") unless self.snippet_by_ref(ref) 

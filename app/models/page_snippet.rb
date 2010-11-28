@@ -1,7 +1,7 @@
 class PageSnippet < Snippet
   belongs_to :page
   
-  validates_presence_of :page
+  validates_presence_of :page, :ref
   validates_uniqueness_of :ref, :scope => :page_id
 end
 

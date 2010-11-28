@@ -1,0 +1,21 @@
+/* @override http://localhost:3000/stylesheets/styles-gencom.css */
+
+/* Product horizontal listings */
+div.product{float:left;width:140px;height:200px;background:url("../images/product-background.gif") top left no-repeat;}
+div.productSelected{float:left;width:140px;height:200px;background:url("../images/product-selected.gif") top left no-repeat;}
+div.productImage{width:140px;height:140px;}
+.productSpacer{margin-left:14px;}
+div.productLink{width:140px;height:60px;margin-top:10px;line-height:110%;}
+img.productSmall{float:left;padding:5px 0 5px 5px;}
+
+a.newlink,a.newlink:visited{text-decoration:underline;font-size:12px;color:#2d2d2d;}
+a.newlink:hover{text-decoration:underline;font-size:12px;color:#c61a1a;}
+
+.inlineList li {display: inline;}
+.menu{width: 890px;height: 47px;background-image: url("../images/nav-bar.png");text-align: center;}
+.menu ul{padding-top: 15px;}
+.menu li{padding-right: 20px;font-size: 1.25em;}
+
+
+
+

@@ -1,0 +1,26 @@
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    $("#add_image_button").click(function(){
+      
+      console.log($('#add_image_form').serialize())
+      
+      $.ajax({
+        type: 'POST',
+        url: $('#add_image_form').attr("action"),
+        data: $('#add_image_form').serialize(),
+        success: function(data) {
+          alert('Load was performed.');
+        }
+      });
+    });
+  });
+</script>
+<p>
+  <h3>add image</h3>
+  <% form_for(:image, :url => {:action=>'add_image', :controller=>'sites'}, :html => {:id => 'add_image_form'}) do |i| %>
+  
+    <%= i.file_field :picture %>
+  
+  <% end %>
+  <button id='add_image_button' >add image</button>
+</p>

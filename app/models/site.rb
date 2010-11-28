@@ -1,5 +1,6 @@
 class Site < ActiveRecord::Base
   has_many :pages
+  has_many :images
   has_one :header_snippet
   has_one :footer_snippet
   has_one :sidebar_snippet
@@ -14,6 +15,10 @@ class Site < ActiveRecord::Base
   
   def default_page
     self.pages.find_by_id(self.default_page_id)
+  end
+  
+  def css
+    "#{domain}.css"
   end
   
   private

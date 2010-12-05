@@ -8,20 +8,22 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div class='page pagebg'>
+  <div class='padTop20'>
+    <div class='page pagebg'>
     
-    <div class='header'>
-      <%= raw @site.header_snippet.markdown %>
+      <div class='header'>
+        <%= raw @site.header_snippet.markdown %>
+      </div>
+    
+      <div class='content'>
+        <%= yield %>
+      </div>
+    
+      <div class='footer'>
+        <%= raw @site.footer_snippet.markdown %>
+      </div>
+    
     </div>
-    
-    <div class='content'>
-      <%= yield %>
-    </div>
-    
-    <div class='footer'>
-      <%= raw @site.footer_snippet.markdown %>
-    </div>
-    
   </div>
 </body>
 </html>

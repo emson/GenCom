@@ -1,4 +1,7 @@
 class Admin::SnippetsController < ApplicationController
+  layout "admin"
+  
+  
   # GET /snippets
   # GET /snippets.xml
   def index

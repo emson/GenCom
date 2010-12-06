@@ -1,27 +1,28 @@
 <h1>Listing sites</h1>
+<p>
+  <%= link_to 'New Site', new_admin_site_path %>
+</p>
+<hr/>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Domain</th>
-    <th>Notes</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class='unit size2of3'>
+  <ul class='listNoStyle'>
+    <% @sites.each do |site| %>
+    <li>
+      <div class='media'>
+        <div class='padTop10'>
+          <h3><%= link_to "#{site.domain}: #{site.title}", admin_site_path(site) %></h3>
+          <p>
+            <%= site.notes %>
+          </p>
+          <p><%= link_to 'Show', admin_site_path(site) %> | <%= link_to 'Edit', edit_admin_site_path(site) %> | <%= link_to 'Destroy', admin_site_path(site), :confirm => 'Are you sure?', :method => :delete %></p>
+        </div>
+      </div>
+      <div class='clear'></div>
+      <hr />
+    </li>
+    <% end %>
+  </ul>
+</div>
 
-<% @sites.each do |site| %>
-  <tr>
-    <td><%= site.title %></td>
-    <td><%= site.domain %></td>
-    <td><%= site.notes %></td>
-    <td><%= link_to 'Show', admin_site_path(site) %></td>
-    <td><%= link_to 'Edit', edit_admin_site_path(site) %></td>
-    <td><%= link_to 'Destroy', admin_site_path(site), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Site', new_admin_site_path %>
+<div class='clear'></div>

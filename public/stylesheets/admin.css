@@ -1,0 +1,51 @@
+/* @override http://localhost:3000/stylesheets/admin.css?1291674118 */
+
+/* Product horizontal listings */
+div.product{float:left;width:140px;height:200px;background:url("../images/localhost/product-background.gif") top left no-repeat;}
+div.productSelected{float:left;width:140px;height:200px;background:url("../images/localhost/product-selected.gif") top left no-repeat;}
+div.productImage{width:140px;height:140px;}
+.productSpacer{margin-left:14px;}
+div.productLink{width:140px;height:60px;margin-top:10px;line-height:110%;}
+img.productSmall{float:left;padding:5px 0 5px 5px;}
+
+a.newlink,a.newlink:visited{text-decoration:underline;font-size:12px;color:#2d2d2d;}
+a.newlink:hover{text-decoration:underline;font-size:12px;color:#c61a1a;}
+
+.inlineList li {display: inline;}
+.menu{width: 862px;height: 99px;background-image: url("../images/localhost/nav-bar.gif");text-align: center;color: #b0ffff;font-size: 15px;font-family: "century schoolbook";}
+.menu ul{padding-top: 40px;}
+.menu li{padding-right: 20px;font-size: 1.25em;}
+.menu a, .menu a:visited{color: #b0ffff;text-decoration: none;}
+.menu a:hover{text-decoration: underline;color: white;}
+.active{color: white;}
+
+.padTop10{padding-top: 10px;}
+.padTop20{padding-top: 20px;}
+.padLft90{padding-left: 90px;}
+.span-1{padding-left: 40px;}
+
+.rounded {-moz-border-radius: 20px;-webkit-border-radius: 20px;-khtml-border-radius: 20px;border-radius: 20px;}
+h1.logo {margin: 0;padding: 0;border: 0;text-indent: -9999px;width:630px;height:90px;background: white url("../images/gencom-logo.jpg") no-repeat;}
+.clear{clear: both;}
+
+/* Site Specific */
+
+html{background-color:#023e54;}
+
+body{background: #023e54 url("../images/background.jpg") repeat-x; }
+.pagebg{background: white; }
+.page{padding: 10px 20px;min-height: 600px;}
+.borders{border: 5px solid #066389;}
+.legend{font-size: 1.4em;line-height: 1.5em;}
+.footer{color: white;}
+
+/* links */
+a {color: #e2760e; text-decoration: none;}
+a:focus, a:hover {text-decoration: underline;}
+a:visited { color: #d06d13; }
+
+.footer{text-align: center;font-size: 0.8em;}
+.media .img{float:left;margin-right: 10px;}
+
+.listNoStyle{margin: 0;padding: 0;}
+

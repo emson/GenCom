@@ -16,6 +16,10 @@ class Page < ActiveRecord::Base
     self.slug = self.title.gsub(/[^A-Z,a-z,0-9,_]/,"-").downcase.squeeze('-') if self.slug.blank? || force == true
   end
   
+  def default?
+    true if self.site.default_page_id == self.id
+  end
+  
   
   private
     

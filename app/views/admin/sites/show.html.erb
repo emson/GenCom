@@ -9,13 +9,30 @@
     <div class='inner'>
       <div class='hd section'>
         <h2>
-          <%= @site.title %>
+          <%= @site.title %>:  <strong><%= link_to "#{@site.domain}", "http://#{@site.domain}" %></strong>
         </h2>
-        <p><strong><%= link_to "#{@site.domain}", "http://#{@site.domain}" %></strong></p>
       </div>
       <div class='bd legend'>
         <p>
           <%= @site.notes %>
+        </p>
+        <p>
+          <h4>Header</h4>
+          <ul>
+            <% header = @site.header_snippet -%>
+            <li><%= link_to "#{header.type}", admin_snippet_path(header) %></li>
+          </ul>
+          <h4>Pages</h4>
+          <ul>
+            <% @site.pages.each do |page| -%>
+            <li>Page<%= mark_default(page) %>: <%= link_to "#{page.title}: #{page.template}", admin_page_path(page) %></li>
+            <% end -%>
+          </ul>
+          <h4>Footer</h4>
+          <ul>
+            <% footer = @site.footer_snippet -%>
+            <li><%= link_to "#{footer.type}", admin_snippet_path(footer) %></li>
+          </ul>
         </p>
       </div>
       <div class='ft'>

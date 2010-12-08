@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [:admin, @snippet] %> |
-<%= link_to 'Back', admin_snippets_path %>
+<p>
+  <%= link_to 'Show', admin_snippet_path(@snippet) %>
+</p>

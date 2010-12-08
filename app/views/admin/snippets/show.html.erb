@@ -1,20 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Ref:</b>
-  <%= @snippet.ref %>
-</p>
+<div class='unit size2of3'>
+  <div class='mod bigPic complex flow'>
+    <b class='top'>
+      <b class='tl'></b>
+      <b class='tr'></b>
+    </b>
+    <div class='inner'>
+      <div class='hd section'>
+        <h2>
+          <%= @snippet.type %>
+        </h2>
+      </div>
+      <div class='bd legend'>
+        <p>
+          <%= @snippet.ref %>
+        </p>
+        <p>
+          <%= @snippet.content %>
+        </p>
+      </div>
+      <div class='ft'>
+        <p>
+          <%= link_to 'Edit', edit_admin_snippet_path(@snippet) %> |
+          <%= link_to 'Back', admin_site_path(@snippet.site) %>
+        </p>
+      </div>
+    </div>
+    <b class='bottom'>
+      <b class='bl'></b>
+      <b class='br'></b>
+    </b>
+  </div>
+</div>
 
-<p>
-  <b>Content:</b>
-  <%= @snippet.content %>
-</p>
-
-<p>
-  <b>Page:</b>
-  <%= @snippet.page_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_admin_snippets_path(@snippet) %> |
-<%= link_to 'Back', admin_snippets_path %>

@@ -1,15 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @page.title %>
-</p>
-
-<p>
-  <b>Site:</b>
-  <%= @page.site_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_admin_page_path(@page) %> |
-<%= link_to 'Back', admin_pages_path %>
+<div class='unit size2of3'>
+  <div class='mod bigPic complex flow'>
+    <b class='top'>
+      <b class='tl'></b>
+      <b class='tr'></b>
+    </b>
+    <div class='inner'>
+      <div class='hd section'>
+        <h2>
+        <%= @page.title %> <%= mark_default @page, "(default)" %>
+        </h2>
+        <p><strong>Site:<%= link_to "#{@page.site.title}", admin_site_path(@page.site) %></strong></p>
+      </div>
+      <div class='bd legend'>
+        <p>
+          <ul>
+            <% @page.page_snippets.each do |snippet| -%>
+            <li>Snippet: <%= snippet.content %></li>
+            <% end -%>
+          </ul>
+        </p>
+      </div>
+      <div class='ft'>
+        <p>
+          <%= link_to 'Edit', edit_admin_page_path(@page) %> |
+          <%= link_to 'Back', admin_pages_path %>
+        </p>
+      </div>
+    </div>
+    <b class='bottom'>
+      <b class='bl'></b>
+      <b class='br'></b>
+    </b>
+  </div>
+</div>

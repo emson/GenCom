@@ -63,7 +63,7 @@ class Admin::SnippetsController < ApplicationController
 
     respond_to do |format|
       if @snippet.update_attributes(params[:snippet])
-        format.html { redirect_to(@snippet, :notice => 'Snippet was successfully updated.') }
+        format.html { redirect_to(admin_snippet_path(@snippet), :notice => 'Snippet was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

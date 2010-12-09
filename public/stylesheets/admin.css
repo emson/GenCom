@@ -1,4 +1,6 @@
-/* @override http://localhost:3000/stylesheets/admin.css?1291674118 */
+/* @override 
+	http://localhost:3000/stylesheets/admin.css?1291937940
+*/
 
 /* Product horizontal listings */
 div.product{float:left;width:140px;height:200px;background:url("../images/localhost/product-background.gif") top left no-repeat;}
@@ -27,6 +29,7 @@ a.newlink:hover{text-decoration:underline;font-size:12px;color:#c61a1a;}
 .rounded {-moz-border-radius: 20px;-webkit-border-radius: 20px;-khtml-border-radius: 20px;border-radius: 20px;}
 h1.logo {margin: 0;padding: 0;border: 0;text-indent: -9999px;width:630px;height:90px;background: white url("../images/gencom-logo.jpg") no-repeat;}
 .clear{clear: both;}
+#notice{color: #08c30d;}
 
 /* Site Specific */
 

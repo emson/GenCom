@@ -28,7 +28,10 @@ class Admin::SnippetsController < ApplicationController
   # GET /snippets/new.xml
   def new
     @snippet = Snippet.new
-
+    
+    # TODO pass correct site valude down !!!!!!!!!!!!!!!!
+    @site = Site.find(1)
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @snippet }
@@ -38,12 +41,16 @@ class Admin::SnippetsController < ApplicationController
   # GET /snippets/1/edit
   def edit
     @snippet = Snippet.find(params[:id])
+    @site = Site.find(@snippet.page_id)
   end
 
   # POST /snippets
   # POST /snippets.xml
   def create
     @snippet = Snippet.new(params[:snippet])
+    
+    # TODO pass correct site valude down !!!!!!!!!!!!!!!!
+    @site = Site.find(1)
 
     respond_to do |format|
       if @snippet.save

@@ -23,6 +23,7 @@ a.newlink:hover{text-decoration:underline;font-size:12px;color:#c61a1a;}
 
 .padTop10{padding-top: 10px;}
 .padTop20{padding-top: 20px;}
+.padLft10{padding-left: 10px;}
 .padLft90{padding-left: 90px;}
 .span-1{padding-left: 40px;}
 
@@ -30,6 +31,7 @@ a.newlink:hover{text-decoration:underline;font-size:12px;color:#c61a1a;}
 h1.logo {margin: 0;padding: 0;border: 0;text-indent: -9999px;width:630px;height:90px;background: white url("../images/gencom-logo.jpg") no-repeat;}
 .clear{clear: both;}
 #notice{color: #08c30d;}
+.error{color: red;}
 
 /* Site Specific */
 
@@ -51,4 +53,6 @@ a:visited { color: #d06d13; }
 .media .img{float:left;margin-right: 10px;}
 
 .listNoStyle{margin: 0;padding: 0;}
+.field, .actions{padding-top: 20px;}
+
 

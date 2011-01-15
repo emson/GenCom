@@ -1,13 +1,15 @@
-<%= form_for( @snippet, :as => :snippet, :url => admin_snippet_path(@snippet)) do |f| %>
+<%= form_for([:admin, @snippet]) do |f| %>
   <% if @snippet.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+      <div class='error'>
+        <span class='padLft10'><%= pluralize(@snippet.errors.count, "error") %> prohibited this snippet from being saved:</span>
 
-      <ul>
-      <% @snippet.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul class='simpleList'>
+        <% @snippet.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
@@ -20,10 +22,11 @@
     <%= f.text_area :content %>
   </div>
   <div class="field">
-    <%= f.label :page_id %><br />
-    <%= f.text_field :page_id %>
+    <%= f.label :page_id %><br/>
+    <%= f.select :page_id, collect_pages(@site), :include_blank => true %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br/>
 <% end %>

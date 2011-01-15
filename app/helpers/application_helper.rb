@@ -1,7 +1,7 @@
 module ApplicationHelper
   
-  def collect_pages
-    pages = Page.all.collect do |page|
+  def collect_pages(site)
+    pages = site.pages.collect do |page|
       [page.title, page.id]
     end
     pages

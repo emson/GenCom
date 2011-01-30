@@ -14,12 +14,12 @@
     <td><%= snippet.ref %></td>
     <td><%= snippet.content %></td>
     <td><%= snippet.page_id %></td>
-    <td><%= link_to 'Edit', edit_admin_snippet_path(snippet) %></td>
-    <td><%= link_to 'Destroy', admin_snippet_path(snippet), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Edit', edit_admin_site_page_snippet_path(params[:site_id], params[:page_id], snippet) %></td>
+    <td><%= link_to 'Destroy', admin_site_page_snippet_path(params[:site_id], params[:page_id], snippet), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Snippet', new_admin_snippet_path %>
+<%= link_to 'New Snippet', new_admin_site_page_snippet_path(params[:site_id], params[:page_id]) %>

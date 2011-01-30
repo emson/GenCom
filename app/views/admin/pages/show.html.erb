@@ -13,21 +13,21 @@
         </h2>
         <p>
           <strong>Site: <%= link_to "#{@page.site.title}", admin_site_path(@page.site) %></strong><br/>
-          <strong><%= link_to "add snippet", new_admin_snippet_path %></strong></p>
+          <strong><%= link_to "add snippet", new_admin_site_page_snippet_path(params[:site_id], @page) %></strong></p>
       </div>
       <div class='bd legend'>
         <p>
           <ul>
             <% @page.page_snippets.each do |snippet| -%>
-            <li>Snippet: <%= snippet.content %> <%= link_to 'Edit', edit_admin_snippet_path(snippet) %></li>
+            <li>Snippet: <%= snippet.content %> <%= link_to 'Edit', edit_admin_site_page_snippet_path(params[:site_id], @page, snippet) %></li>
             <% end -%>
           </ul>
         </p>
       </div>
       <div class='ft'>
         <p>
-          <%= link_to 'Edit', edit_admin_page_path(@page) %> |
-          <%= link_to 'Back', admin_sites_path %>
+          <%= link_to 'Edit', edit_admin_site_page_path(params[:site_id], @page) %> |
+          <%= link_to 'Back', admin_site_path(params[:site_id]) %>
         </p>
       </div>
     </div>

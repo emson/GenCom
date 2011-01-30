@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+SITES SNIPPET
 <div class='unit size2of3'>
   <div class='mod bigPic complex flow'>
     <b class='top'>
@@ -22,8 +22,8 @@
       </div>
       <div class='ft'>
         <p>
-          <%= link_to 'Edit', edit_admin_site_page_snippet_path(params[:site_id], params[:page_id], @snippet) %> |
-          <%= link_to 'Back', admin_site_path(params[:site_id]) %>
+          <%= link_to 'Edit', edit_admin_site_site_snippet_path(params[:site_id], @snippet) %> |
+          <%= link_to 'Back', admin_site_path(@snippet.site) %>
         </p>
       </div>
     </div>

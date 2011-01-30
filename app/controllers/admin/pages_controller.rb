@@ -43,11 +43,11 @@ class Admin::PagesController < ApplicationController
   # POST /pages
   # POST /pages.xml
   def create
-    @page = Page.new(params[:page])
+    @page = Page.new(params[:page].merge(:site_id =>params[:site_id]))
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to(@page, :notice => 'Page was successfully created.') }
+        format.html { redirect_to(admin_sites_page_path(params[:site], @page), :notice => 'Page was successfully created.') }
         format.xml  { render :xml => @page, :status => :created, :location => @page }
       else
         format.html { render :action => "new" }

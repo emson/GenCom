@@ -1,8 +1,11 @@
 Gencom::Application.routes.draw do
   namespace :admin do
-    resources :snippets
-    resources :pages
-    resources :sites
+    resources :sites do
+      resources :site_snippets
+      resources :pages do
+        resources :snippets
+      end
+    end
   end
   
     

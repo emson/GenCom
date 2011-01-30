@@ -20,18 +20,18 @@
           <h4>Header</h4>
           <ul>
             <% header = @site.header_snippet -%>
-            <li><%= link_to "#{header.type}", admin_snippet_path(header) %></li>
+            <li><%= link_to "#{header.type}", admin_site_site_snippet_path(@site, header) %></li>
           </ul>
           <h4>Pages</h4>
           <ul>
             <% @site.pages.each do |page| -%>
-            <li>Page<%= mark_default(page) %>: <%= link_to "#{page.title}: #{page.template}", admin_page_path(page) %></li>
+            <li>Page<%= mark_default(page) %>: <%= link_to "#{page.title}: #{page.template}", admin_site_page_path(@site, page) %></li>
             <% end -%>
           </ul>
           <h4>Footer</h4>
           <ul>
             <% footer = @site.footer_snippet -%>
-            <li><%= link_to "#{footer.type}", admin_snippet_path(footer) %></li>
+            <li><%= link_to "#{footer.type}", admin_site_site_snippet_path(@site, footer) %></li>
           </ul>
         </p>
       </div>

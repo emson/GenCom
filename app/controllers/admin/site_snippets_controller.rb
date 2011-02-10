@@ -29,9 +29,6 @@ class Admin::SiteSnippetsController < ApplicationController
   def new
     @snippet = Snippet.new
 
-    # TODO pass correct site valude down !!!!!!!!!!!!!!!!
-    @site = Site.find(1)
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @snippet }
@@ -41,7 +38,7 @@ class Admin::SiteSnippetsController < ApplicationController
   # GET /snippets/1/edit
   def edit
     @snippet = Snippet.find(params[:id])
-    @site = Site.find(@snippet.page_id)
+    @site = Site.find(params[:site_id])
   end
 
   # POST /snippets
@@ -70,7 +67,7 @@ class Admin::SiteSnippetsController < ApplicationController
 
     respond_to do |format|
       if @snippet.update_attributes(params[:snippet])
-        format.html { redirect_to(admin_page_snippet_path(@snippet), :notice => 'Snippet was successfully updated.') }
+        format.html { redirect_to(admin_site_site_snippet_path(params[:site_id], @snippet), :notice => 'Snippet was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -1,4 +1,4 @@
-<%= form_for([:admin, :site, @snippet]) do |f| %>
+<%= form_for(@snippet, :url=>admin_site_site_snippet_path(@site, @snippet), :as=>:snippet) do |f| %>
   <% if @snippet.errors.any? %>
     <div id="error_explanation">
       <div class='error'>

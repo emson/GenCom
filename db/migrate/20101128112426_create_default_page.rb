@@ -1,7 +1,7 @@
 class CreateDefaultPage < ActiveRecord::Migration
   def self.up
     site = Site.find_by_title("Dev Site")
-    page = Page.create!(:title=>"Dev Page", :site_id=>site.id, :page_type=>"col_3")
+    page = Page.create(:title=>"Dev Page", :site_id=>site.id, :template=>"col_3")
     site.update_attributes(:default_page_id=>page.id)
   end
 

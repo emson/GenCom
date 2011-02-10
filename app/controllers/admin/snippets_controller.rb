@@ -27,10 +27,9 @@ class Admin::SnippetsController < ApplicationController
   # GET /snippets/new
   # GET /snippets/new.xml
   def new
-    @snippet = Snippet.new
+    @snippet = PageSnippet.new
     
-    # TODO pass correct site valude down !!!!!!!!!!!!!!!!
-    @site = Site.find(1)
+    # @site = Site.find(params[:site_id])
     
     respond_to do |format|
       format.html # new.html.erb
@@ -47,11 +46,12 @@ class Admin::SnippetsController < ApplicationController
   # POST /snippets
   # POST /snippets.xml
   def create
-    @snippet = Snippet.new(params[:snippet])
-
+    @snippet = PageSnippet.new(params[:page_snippet])
+    @snippet.page_id = params[:page_id]
+    
     respond_to do |format|
       if @snippet.save
-        format.html { redirect_to(admin_site_page_snippets_path(params[:site_id], params[:page_id]), :notice => 'Snippet was successfully created.') }
+        format.html { redirect_to(admin_site_page_path(params[:site_id], params[:page_id]), :notice => 'Snippet was successfully created.') }
         format.xml  { render :xml => @snippet, :status => :created, :location => @snippet }
       else
         format.html { render :action => "new" }
@@ -64,9 +64,9 @@ class Admin::SnippetsController < ApplicationController
   # PUT /snippets/1.xml
   def update
     @snippet = Snippet.find(params[:id])
-
+    
     respond_to do |format|
-      if @snippet.update_attributes(params[:snippet])
+      if @snippet.update_attributes(params[:page_snippet])
         format.html { redirect_to(admin_site_page_snippet_path(params[:site_id], params[:page_id], @snippet), :notice => 'Snippet was successfully updated.') }
         format.xml  { head :ok }
       else

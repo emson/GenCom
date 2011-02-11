@@ -49,6 +49,7 @@ GEM
       rails (>= 3.0.0.beta4)
     highline (1.6.1)
     i18n (0.4.1)
+    jquery_rails3 (1.4.3)
     linecache (0.43)
     mail (2.2.7)
       activesupport (>= 2.3.6)
@@ -122,6 +123,7 @@ DEPENDENCIES
   autotest
   capistrano
   factory_girl_rails
+  jquery_rails3
   paperclip
   rails (= 3.0.1)
   rdiscount

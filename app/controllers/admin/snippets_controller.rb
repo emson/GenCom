@@ -83,7 +83,7 @@ class Admin::SnippetsController < ApplicationController
     @snippet.destroy
 
     respond_to do |format|
-      format.html { redirect_to(snippets_url) }
+      format.html { redirect_to(admin_site_page_path(params[:site_id], params[:page_id])) }
       format.xml  { head :ok }
     end
   end

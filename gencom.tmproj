@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>db/migrate/20101128122304_add_default_snippet_data.rb</string>
+	<string>app/controllers/admin/snippets_controller.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,6 +21,20 @@
 	<integer>469</integer>
 	<key>metaData</key>
 	<dict>
+		<key>Gemfile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>app/controllers/admin/pages_controller.rb</key>
 		<dict>
 			<key>caret</key>
@@ -35,49 +49,19 @@
 			<key>firstVisibleLine</key>
 			<integer>27</integer>
 		</dict>
-		<key>app/controllers/admin/site_snippets_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>19</integer>
-				<key>line</key>
-				<integer>42</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>27</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>15</integer>
-				<key>line</key>
-				<integer>42</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>22</integer>
-				<key>line</key>
-				<integer>42</integer>
-			</dict>
-		</dict>
 		<key>app/controllers/admin/snippets_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>57</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>69</integer>
+				<integer>77</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>44</integer>
+			<integer>56</integer>
 		</dict>
 		<key>app/controllers/pages_controller.rb</key>
 		<dict>
@@ -106,6 +90,36 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>app/models/header_snippet.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>12</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
 		</dict>
 		<key>app/models/page.rb</key>
 		<dict>
@@ -182,14 +196,56 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>61</integer>
+				<integer>165</integer>
 				<key>line</key>
-				<integer>29</integer>
+				<integer>21</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>7</integer>
+		</dict>
+		<key>app/views/admin/site_snippets/_form.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>8</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/views/admin/site_snippets/edit.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>69</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/views/admin/site_snippets/show.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>11</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>app/views/admin/sites/show.html.erb</key>
 		<dict>
@@ -210,9 +266,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>29</integer>
+				<integer>27</integer>
 				<key>line</key>
 				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/views/admin/snippets/edit.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>6</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -238,7 +308,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>65</integer>
+				<integer>35</integer>
 				<key>line</key>
 				<integer>4</integer>
 			</dict>
@@ -252,7 +322,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>40</integer>
+				<integer>84</integer>
 				<key>line</key>
 				<integer>25</integer>
 			</dict>
@@ -260,20 +330,6 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>1</integer>
-		</dict>
-		<key>app/views/layouts/application.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>59</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
 		</dict>
 		<key>app/views/pages/mock.html.erb</key>
 		<dict>
@@ -429,34 +485,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>db/migrate/20101128112426_create_default_page.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>db/migrate/20101128122304_add_default_snippet_data.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>55</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>db/migrate/20101128133818_create_images.rb</key>
 		<dict>
 			<key>caret</key>
@@ -476,14 +504,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>13</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>168</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>134</integer>
 		</dict>
 		<key>public/stylesheets/localhost.css</key>
 		<dict>
@@ -619,9 +647,18 @@
 	<key>openDocuments</key>
 	<array>
 		<string>app/views/admin/sites/show.html.erb</string>
-		<string>app/controllers/admin/site_snippets_controller.rb</string>
-		<string>db/migrate/20101128112426_create_default_page.rb</string>
-		<string>db/migrate/20101128122304_add_default_snippet_data.rb</string>
+		<string>app/views/admin/snippets/_form.html.erb</string>
+		<string>app/views/admin/snippets/new.html.erb</string>
+		<string>app/views/admin/snippets/show.html.erb</string>
+		<string>app/controllers/admin/snippets_controller.rb</string>
+		<string>app/views/admin/site_snippets/show.html.erb</string>
+		<string>app/views/admin/pages/show.html.erb</string>
+		<string>Gemfile</string>
+		<string>app/views/admin/snippets/edit.html.erb</string>
+		<string>public/javascripts/rails.js</string>
+		<string>app/views/admin/site_snippets/_form.html.erb</string>
+		<string>app/views/admin/site_snippets/edit.html.erb</string>
+		<string>app/models/header_snippet.rb</string>
 		<string>db/migrate/20101128133818_create_images.rb</string>
 		<string>app/models/page.rb</string>
 		<string>db/migrate/20101114114033_create_pages.rb</string>
@@ -637,6 +674,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{878, 110}, {720, 681}}</string>
+	<string>{{720, 110}, {720, 681}}</string>
 </dict>
 </plist>

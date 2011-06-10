@@ -8,7 +8,7 @@ module ApplicationHelper
   end
   
   def mark_default(page, val=' default')
-    (page.default?)? val : "" 
+    (page.default?) ? val : "" 
   end
   
 end

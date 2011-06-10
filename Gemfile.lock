@@ -56,8 +56,7 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
-    mocha (0.9.9)
-      rake
+    mocha (0.9.12)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -101,7 +100,7 @@ GEM
       rspec-expectations (~> 2.0.1)
     rspec-rails (2.0.1)
       rspec (~> 2.0.0)
-    rspec-rails-mocha (0.2.0)
+    rspec-rails-mocha (0.3.0)
       mocha (>= 0.9.8)
       rspec-rails (>= 2.0.0)
     ruby-debug (0.10.4)
@@ -128,6 +127,6 @@ DEPENDENCIES
   rails (= 3.0.1)
   rdiscount
   rspec-rails (~> 2.0.1)
-  rspec-rails-mocha
+  rspec-rails-mocha (~> 0.3.0)
   ruby-debug
   sqlite3-ruby

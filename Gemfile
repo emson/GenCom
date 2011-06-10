@@ -19,7 +19,7 @@ group :test, :development do
   gem 'ruby-debug'
   gem "autotest"
   gem "rspec-rails", "~> 2.0.1"
-  gem "rspec-rails-mocha"
+  gem "rspec-rails-mocha", "~> 0.3.0"
   gem "factory_girl_rails"
 end
 

@@ -47,7 +47,7 @@ class Admin::SitesController < ApplicationController
 
     respond_to do |format|
       if @site.save
-        format.html { redirect_to(@site, :notice => 'Site was successfully created.') }
+        format.html { redirect_to(admin_sites_url, :notice => 'Site was successfully created.') }
         format.xml  { render :xml => @site, :status => :created, :location => @site }
       else
         format.html { render :action => "new" }
@@ -79,7 +79,7 @@ class Admin::SitesController < ApplicationController
     @site.destroy
 
     respond_to do |format|
-      format.html { redirect_to(sites_url) }
+      format.html { redirect_to(admin_sites_url) }
       format.xml  { head :ok }
     end
   end
